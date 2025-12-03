@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jaystore.com</title>
+  <meta name="description" content="Triplehands Agro Food Enterprises — quality agro products, fair prices, and reliable delivery." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --brand:#0f7a3b; /* deep green */
+      --brand-dark:#0a5a2a;
+      --accent:#f4b400; /* warm gold */
+      --bg:#f7faf7;
+      --text:#1f2d1f;
+      --muted:#5b6b5b;
+      --card:#ffffff;
+      --border:#e4eee4;
+      --shadow:0 10px 25px rgba(0,0,0,0.08);
+      --radius:14px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      line-height:1.5;
+    }
+
+    /* Header */
+    .header{
+      position:sticky; top:0; z-index:50;
+      background:linear-gradient(135deg, var(--brand), var(--brand-dark));
+      color:#fff;
+      box-shadow:var(--shadow);
+    }
+    .nav{
+      max-width:1120px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between;
+      padding:16px 20px;
+    }
+    .logo{
+      display:flex; align-items:center; gap:12px; text-decoration:none; color:#fff;
+    }
+    .logo-mark{
+      width:40px; height:40px; border-radius:10px;
+      background:#fff1; border:1px solid #fff3;
+      display:grid; place-items:center; font-weight:700;
+    }
+    .logo-text{font-weight:700; letter-spacing:0.2px}
+    .nav-links a{
+      color:#fff; text-decoration:none; margin-left:18px; font-weight:600; opacity:0.9;
+    }
+    .nav-links a:hover{opacity:1; text-decoration:underline}
+
+    /* Hero */
+    .hero{
+      max-width:1120px; margin:24px auto 0; padding:32px 20px 18px;
+      display:grid; grid-template-columns:1.2fr 0.8fr; gap:24px;
+    }
+    .hero-card{
+      background:var(--card); border:1px solid var(--border);
+      border-radius:var(--radius); box-shadow:var(--shadow); padding:28px;
+    }
+    .hero h1{margin:0 0 8px; font-size:2rem}
+    .hero p{margin:0; color:var(--muted)}
+    .hero-aside{
+      background:linear-gradient(135deg, #eaf7ea, #fff);
+      border:1px solid var(--border); border-radius:var(--radius);
+      padding:22px; box-shadow:var(--shadow);
+    }
+    .badge{
+      display:inline-block; background:var(--accent); color:#3b2900;
+      font-weight:700; padding:6px 10px; border-radius:10px; margin-bottom:10px;
+    }
+
+    /* Filters */
+    .filters{
+      max-width:1120px; margin:6px auto 0; padding:0 20px 10px;
+      display:flex; flex-wrap:wrap; gap:10px; align-items:center;
+    }
+    .search{
+      flex:1 1 280px; display:flex; gap:10px;
+    }
+    input[type="search"]{
+      flex:1; padding:12px 14px; border:1px solid var(--border);
+      border-radius:10px; background:#fff; box-shadow:0 3px 10px rgba(0,0,0,0.03);
+    }
+    select, .btn{
+      padding:12px 14px; border:1px solid var(--border);
+      border-radius:10px; background:#fff; font-weight:600;
+      box-shadow:0 3px 10px rgba(0,0,0,0.03);
+    }
+    .btn-primary{
+      background:var(--brand); color:#fff; border:none;
+    }
+    .btn-primary:hover{background:var(--brand-dark)}
+
+    /* Grid */
+    .grid{
+      max-width:1120px; margin:0 auto; padding:8px 20px 40px;
+      display:grid; grid-template-columns:repeat(4, 1fr); gap:18px;
+    }
+    @media (max-width:980px){ .grid{ grid-template-columns:repeat(3, 1fr);} .hero{ grid-template-columns:1fr; } }
+    @media (max-width:720px){ .grid{ grid-template-columns:repeat(2, 1fr);} }
+    @media (max-width:480px){ .grid{ grid-template-columns:1fr;} }
+
+    .card{
+      background:var(--card); border:1px solid var(--border);
+      border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow);
+      display:flex; flex-direction:column;
+    }
+    .card img{
+      aspect-ratio: 4 / 3; width:100%; object-fit:cover; background:#eef3ee;
+    }
+    .card-body{ padding:14px 14px 16px; display:flex; flex-direction:column; gap:8px; }
+    .name{ font-weight:700; }
+    .desc{ color:var(--muted); font-size:0.95rem; }
+    .price-row{ display:flex; align-items:center; justify-content:space-between; }
+    .price{ font-weight:700; color:var(--brand-dark); }
+    .unit{ color:var(--muted); font-size:0.9rem; }
+    .cta{ display:flex; gap:10px; margin-top:8px; }
+    .cta .btn{ flex:1; text-align:center; cursor:pointer }
+    .btn-outline{ background:#fff; border:1px solid var(--brand); color:var(--brand); }
+    .btn-outline:hover{ background:#f0fbf4 }
+
+    /* Footer */
+    footer{
+      border-top:1px solid var(--border);
+      background:#fff; padding:24px 20px; color:var(--muted);
+    }
+    .footer-inner{ max-width:1120px; margin:0 auto; display:grid; gap:14px; }
+    .contact-row{ display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
+    .contact-row a{ color:var(--brand-dark); font-weight:700; text-decoration:none }
+    .contact-row a:hover{ text-decoration:underline }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav" aria-label="Primary">
+      <a class="logo" href="#">
+        <div class="logo-mark">JS</div>
+        <div class="logo-text">JayStore</div>
+      </a>
+      <div class="nav-links">
+        <a href="#products">Apps</a>
+        <a href="#about">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="about">
+    <div class="hero-card">
+      <span class="badge">Reliable • Real • Trusted</span>
+      <h1>Quality apps, fair prices, and reliable downloads</h1>
+<p>Please we are still under development. Thank you.</p>
+
+    </div>
+  </section>
+
+  <!-- Filters -->
+  <section class="filters" aria-label="Product filters">
+    <div class="search">
+      <input id="search" type="search" placeholder="Search apps" aria-label="Search apps">
+      <button class="btn btn-primary" onclick="applySearch()">Search</button>
+    </div>
+     <select id="sort" aria-label="Sort products" onchange="applyFilters()">
+      <option value="popular">Sort: Popular</option>
+      <option value="name">Name (A–Z)</option>
+    </select>
+  </section>
+
+  <!-- games Grid -->
+  <main class="grid" id="games">
+
+    <!-- Replace image src with your actual product photos -->
+    <article class="card" data-name="Minecraft" data-category="flour" data-price="free">
+      <IMG src="C:\Users\USER\Documents\Screenshot_20251202-152905.png">
+      <div class="card-body">
+        <div class="name">Minecraft</div>
+        <div class="desc"><A href="https://minecrftapkmod.com/">download</A>.</div>
+        <div class="price-row">
+          <div class="price">free</div>
+          <div class="unit">minecraft beta for android</div>
+        </div>
+         </div>
+    </article>
+
+ <article class="card" data-name="MBlock" data-category="flour" data-price="free">
+      <IMG src="C:\Users\USER\Downloads\Screenshot_20251202-174102.png">
+      <div class="card-body">
+        <div class="name">MBlock</div>
+        <div class="desc"><A href="https://mblock.cc/">download</A>.</div>
+        <div class="price-row">
+          <div class="price">free</div>
+          <div class="unit">coding and robotics</div>
+        </div>
+         </div>
+    </article>
+
+    <article class="card" data-name="Roblox" data-category="flour" data-price="free">
+      <img src="C:\Users\USER\Downloads\Screenshot_20251202-172217.png">
+      <div class="card-body">
+        <div class="name">Roblox</div>
+        <div class="desc"><A href="https://www.Roblox.com">download</A>.</div>
+        <div class="price-row">
+          <div class="price">free</div>
+          <div class="unit">play with friends.</div>
+        </div>
+      </div>
+</article>
+
+    <article class="card" data-name="NBA2k20" data-category="flour" data-price="free">
+      <img src="C:\Users\USER\Downloads\.png">
+      <div class="card-body">
+        <div class="name">NBA2k20</div>
+        <div class="desc"><A href="https://apkpure.com/nba2k-20/com.t2ksports.nba2k20and/download">download</A>.</div>
+        <div class="price-row">
+          <div class="price">free</div>
+          <div class="unit">basketball game.</div>
+        </div>
+      </div>
+</article>
+
+
+
+
+    <article class="card" data-name="Basketball classics" data-category="flour" data-price="free">
+      <img src="C:\Users\USER\Downloads\Screenshot_20251202-173553.png">
+      <div class="card-body">
+        <div class="name">Basketball classics</div>
+        <div class="desc"><A href="C:\Users\USER\Downloads\Basketball.Classics\Basketball.Classics\Basketball.Classics\basketball_classics">download</A>.</div>
+        <div class="price-row">
+          <div class="price">free</div>
+          <div class="unit">setup</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="card" data-name="chess.com" data-category="flour" data-price="free">
+      <img src="C:\Users\USER\Downloads\chess.com.png">
+      <div class="card-body">
+        <div class="name">Chess.com</div>
+        <div class="desc"><A href="https://www.chess.com">download</A>.</div>
+        <div class="price-row">
+          <div class="price">free</div>
+          <div class="unit">learn, play chess with friends.</div>
+        </div>
+      </div>
+</article>
+
+    <article class="card" data-name="Duolingo" data-category="flour" data-price="free">
+      <img src="C:\Users\USER\Downloads\duolingo.png">
+      <div class="card-body">
+        <div class="name">duolingo</div>
+        <div class="desc"><A href="https://www.duolingo.com">download</A>.</div>
+        <div class="price-row">
+          <div class="price">free</div>
+          <div class="unit">learn various languages.</div>
+        </div>
+      </div>
+</article>
+
+<article class="card" data-name="Call of duty mobile" data-category="flour" data-price="free">
+      <img src="C:\Users\USER\Downloads\codm.png">
+      <div class="card-body">
+        <div class="name">Call of Duty Mobile</div>
+        <div class="desc"><A href="https://www.Callofduty.com">download</A>.</div>
+        <div class="price-row">
+          <div class="price">free</div>
+          <div class="unit">Battle online with friends.</div>
+        </div>
+      </div>
+</article>
+
+    <article class="card" data-name="Godot Engine" data-category="flour" data-price="free">
+      <img src="C:\Users\USER\Downloads\godot.png">
+      <div class="card-body">
+        <div class="name">Godot</div>
+        <div class="desc"><A href="https://www.godotengine.com/">download</A>.</div>
+        <div class="price-row">
+          <div class="price">free</div>
+          <div class="unit">create your own game.</div>
+        </div>
+      </div>
+</article>
+
+    <article class="card" data-name="scratch" data-category="flour" data-price="free">
+      <img src="C:\Users\USER\Downloads\scratch.png">
+      <div class="card-body">
+        <div class="name">scratch</div>
+        <div class="desc"><A href="https://www.sratch.com/">download</A>.</div>
+        <div class="price-row">
+          <div class="price">free</div>
+          <div class="unit">coding and robotics.</div>
+        </div>
+      </div>
+</article>
+
+<article class="card" data-name="hoopland" data-category="flour" data-price="free">
+      <img src="C:\Users\USER\Downloads\hoopland.png">
+      <div class="card-body">
+        <div class="name">hoopland</div>
+        <div class="desc"><A href="https://www.koalitygame.com/">download</A>.</div>
+        <div class="price-row">
+          <div class="price">free</div>
+          <div class="unit">pixel basketball game.</div>
+        </div>
+      </div>
+</article>
+
+<article class="card" data-name="guide for making q website" data-category="flour" data-price="free">
+      <img src="C:\Users\USER\Downloads\web.png">
+      <div class="card-body">
+        <div class="name">guide for making a website</div>
+        <div class="desc"><A href="https://www.dummies.com/register/">download</A>.</div>
+        <div class="price-row">
+          <div class="price">free</div>
+          <div class="unit">learn to make your own website.</div>
+        </div>
+      </div>
+</article>
+
+<article class="card" data-name="Jayjay's awesome stories" data-category="flour" data-price="500">
+      <img src="C:\Users\USER\Desktop\kuroko-no-basket-anime-promotional-photo-gkn72jmycauozx0o.jpg">
+      <div class="card-body">
+        <div class="name">Jayjay's awesome stories</div>
+        <div class="desc"><A href="https://mythicaljay1229.github.io/Jayjaystories/">read</A>.</div>
+        <div class="price-row">
+          <div class="price">₦500</div>
+          <div class="unit">learn and support jayjay.</div>
+        </div>
+      </div>
+</article>
+
+      
+    </main>
+
+         © <span id="year"></span> Rocketstar3. All rights reserved.
+      </footer>
+
+  <script>
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function applySearch(){
+      const term = document.getElementById('search').value.trim().toLowerCase();
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(c=>{
+        const name = c.dataset.name.toLowerCase();
+        c.style.display = name.includes(term) ? '' : 'none';
+      });
+    }
+
+    function applyFilters(){
+      const category = document.getElementById('category').value;
+      const sort = document.getElementById('sort').value;
+      const grid = document.querySelector('.grid');
+      const cards = Array.from(document.querySelectorAll('.card'));
+
+      // Filter by category
+      cards.forEach(c=>{
+        const cat = c.dataset.category;
+        c.style.display = (category==='all' || cat===category) ? '' : 'none';
+      });
+
+      // Sort
+      const visible = cards.filter(c=>c.style.display!=='none');
+      visible.sort((a,b)=>{
+        const pa = Number(a.dataset.price), pb = Number(b.dataset.price);
+        const na = a.dataset.name.toLowerCase(), nb = b.dataset.name.toLowerCase();
+        if(sort==='price-asc') return pa - pb;
+        if(sort==='price-desc') return pb - pa;
+        if(sort==='name') return na.localeCompare(nb);
+        return 0; // popular default (no change)
+      });
+
+      // Reorder DOM
+      visible.forEach(c=>grid.appendChild(c));
+    }
+  </script>
+</body>
+</html>
