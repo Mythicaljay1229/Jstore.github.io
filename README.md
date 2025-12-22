@@ -198,7 +198,7 @@
         <div class="desc"><A href="https://minecrftapkmod.com/">download</A>.</div>
         <div class="price-row">
           <div class="price">free</div>
-          <div class="unit">minecraft beta for android</div>
+          <div class="unit">323 MB</div>
         </div>
          </div>
     </article>
@@ -210,7 +210,7 @@
         <div class="desc"><A href="https://mblock.cc/">download</A>.</div>
         <div class="price-row">
           <div class="price">free</div>
-          <div class="unit">coding and robotics</div>
+          <div class="unit">300 MB</div>
         </div>
          </div>
     </article>
@@ -234,7 +234,7 @@
         <div class="desc"><A href="https://apkpure.com/nba2k-20/com.t2ksports.nba2k20and/download">download</A>.</div>
         <div class="price-row">
           <div class="price">free</div>
-          <div class="unit">basketball game.</div>
+          <div class="unit">3.2 GB</div>
         </div>
       </div>
 </article>
@@ -249,7 +249,7 @@
         <div class="desc"><A href="C:\Users\USER\Downloads\Basketball.Classics\Basketball.Classics\Basketball.Classics\basketball_classics">download</A>.</div>
         <div class="price-row">
           <div class="price">free</div>
-          <div class="unit">setup</div>
+          <div class="unit">500 MB</div>
         </div>
       </div>
     </article>
@@ -261,7 +261,7 @@
         <div class="desc"><A href="https://www.chess.com">download</A>.</div>
         <div class="price-row">
           <div class="price">free</div>
-          <div class="unit">learn, play chess with friends.</div>
+          <div class="unit">150 MB</div>
         </div>
       </div>
 </article>
@@ -273,7 +273,7 @@
         <div class="desc"><A href="https://www.duolingo.com">download</A>.</div>
         <div class="price-row">
           <div class="price">free</div>
-          <div class="unit">learn various languages.</div>
+          <div class="unit">200 MB.</div>
         </div>
       </div>
 </article>
@@ -285,7 +285,7 @@
         <div class="desc"><A href="https://www.Callofduty.com">download</A>.</div>
         <div class="price-row">
           <div class="price">free</div>
-          <div class="unit">Battle online with friends.</div>
+          <div class="unit">14 GB.</div>
         </div>
       </div>
 </article>
@@ -297,7 +297,7 @@
         <div class="desc"><A href="https://www.godotengine.com/">download</A>.</div>
         <div class="price-row">
           <div class="price">free</div>
-          <div class="unit">create your own game.</div>
+          <div class="unit">100MB.</div>
         </div>
       </div>
 </article>
@@ -306,10 +306,10 @@
       <img src="images/scratch.png" alt="scratch">
       <div class="card-body">
         <div class="name">scratch</div>
-        <div class="desc"><A href="https://www.scratch.com/">download</A>.</div>
+        <div class="desc"><A href="https://scratch.mit.edu/">download</A>.</div>
         <div class="price-row">
           <div class="price">free</div>
-          <div class="unit">coding and robotics.</div>
+          <div class="unit">150 MB</div>
         </div>
       </div>
 </article>
@@ -321,35 +321,10 @@
         <div class="desc"><A href="https://www.koalitygame.com/">download</A>.</div>
         <div class="price-row">
           <div class="price">free</div>
-          <div class="unit">pixel basketball game.</div>
+          <div class="unit">400 MB.</div>
         </div>
       </div>
 </article>
-
-<article class="card" data-name="guide for making a website" data-category="flour" data-price="free">
-      <img src="images/web.png" alt="Guide for making a website">
-      <div class="card-body">
-        <div class="name">guide for making a website</div>
-        <div class="desc"><A href="https://www.dummies.com/register/">download</A>.</div>
-        <div class="price-row">
-          <div class="price">free</div>
-          <div class="unit">learn to make your own website.</div>
-        </div>
-      </div>
-</article>
-
-<article class="card" data-name="Jayjay's awesome stories" data-category="flour" data-price="500">
-      <img src="images/kuroko-no-basket-anime-promotional-photo-gkn72jmycauozx0o.jpg" alt="Jayjay's azesome stories">
-      <div class="card-body">
-        <div class="name">Jayjay's awesome stories</div>
-        <div class="desc"><A href="https://mythicaljay1229.github.io/Jayjaystories/">read</A>.</div>
-        <div class="price-row">
-          <div class="price">₦500</div>
-          <div class="unit">learn and support jayjay.</div>
-        </div>
-      </div>
-</article>
-
       
     </main>
 
@@ -398,6 +373,7 @@
   </script>
 </body>
 </html>
+
 
 
 
