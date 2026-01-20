@@ -13,7 +13,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jaystore.com</title>
-  <meta name="description" content="Triplehands Agro Food Enterprises — quality agro products, fair prices, and reliable delivery." />
+  <meta name="description" content="Jaystore." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -203,6 +203,19 @@
          </div>
     </article>
 
+   <!-- Replace image src with your actual product photos -->
+    <article class="card" data-name="Freefire" data-category="flour" data-price="free">
+      <IMG src="images/freefire.jpg" alt="Freefire">
+      <div class="card-body">
+        <div class="name">Freefire</div>
+        <a href="https://play.google.com/store/search?q=freefire&c=apps" target="_blank">Download</a>
+        <div class="price-row">
+          <div class="price">free</div>
+          <div class="unit">1.5 GB</div>
+        </div>
+         </div>
+    </article>
+    
  <article class="card" data-name="MBlock" data-category="flour" data-price="free">
       <IMG src="images/Screenshot_20251202-174102.png" alt="MBlock">
       <div class="card-body">
@@ -373,6 +386,7 @@
   </script>
 </body>
 </html>
+
 
 
 
